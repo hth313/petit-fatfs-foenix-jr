@@ -7,7 +7,7 @@ C_SRCS = pff.c diskio.c sdc.c
 MODEL =
 LIB_MODEL = lc-sd
 
-INCLUDE = -I ../Calypsi-6502-Foenix/include
+INCLUDE = -I module/Calypsi-6502-Foenix/include
 
 # Object files
 OBJS = $(ASM_SRCS:%.s=obj/%.o) $(C_SRCS:%.c=obj/%.o)
