@@ -1,0 +1,12 @@
+(define memories
+  '((memory flash (address (#xa000 . #xbfff))
+            (section (programStart #xa000)
+                     reset code idata cdata switch data_init_table)
+            (fill 0))
+    (memory RAM (address (#x9a00 . #x9fff))
+            (section cstack data zdata heap))
+    (memory ZPAGE (address (#xca . #xff))
+            (section (registers (#xca . #xff))))
+    (block cstack (size #x100))
+    (block heap (size #x00))
+    ))
